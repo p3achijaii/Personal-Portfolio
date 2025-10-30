@@ -151,3 +151,44 @@ body.home-page {
   margin-bottom: -3rem;
 }
 
+/* ICONS */
+.home-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.icon-box {
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #7b5d4d;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.icon-box:hover {
+  background-color: #ffffff;
+  color: #a6846e;
+  transform: translateY(-3px);
+}
+
+.icon-box i {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #8b6f5c;
+}
+
+.divider-icon {
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  color: #c4a89f;
+}
+
+
