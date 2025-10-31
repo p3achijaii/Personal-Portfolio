@@ -3,35 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
+    <title>Jaina Torres</title>
 
-    <!-- Custom CSS Stylesheet-->
+    <!-- CUSTOM CSS STYLESHEET -->
     <link rel="stylesheet" href="index.css">
 
-    <!-- Social Media Logo Link-->
+    <!-- SOCIAL MEDIA LOGO LINK -->
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   
   <body class="home-page">
-
-  <!-- Navigation Bar -->
+  <!-- NAVIGATION BAR -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="nav-logo">Jaina T.</a>
 
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+
       <ul class="nav-links">
         <li><a href="about.html">About</a></li>
         <span class="nav-icon">✿</span>
-
         <li><a href="project.html">Projects</a></li>
         <span class="nav-icon">✿</span>
-
         <li><a href="form.html">Form</a></li>
       </ul>
     </div>
   </nav>
 
-    <!-- Home -->
+    <!-- HOMEPAGE -->
      <div class="home-container">
       <div class="home-content">
         <div class="home-header">
@@ -64,7 +65,7 @@
             <span class="divider-icon">✿</span>
 
            <a
-            href="mailto:jainamicah@gmail.com" 
+            href="https://mail.google.com/mail/" 
             class="icon-box"
           >
           <i data-lucide="mail"></i>
@@ -76,7 +77,13 @@
 
      <script>
       lucide.createIcons();
+      const hamburger = document.getElementById("hamburger")
+      const navLinks = document.getElementById("nav-links")
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("show");
+      });
      </script>
   </body>
 </html>
-
