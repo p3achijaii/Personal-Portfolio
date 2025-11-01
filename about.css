@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Kapakana');
+@import url('https://fonts.googleapis.com/css?family=Cormorant Garamond');
+
+/* ========== GLOBAL RESET ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Georgia", serif;
+  color: #6b5549;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+/* ==== GLOBAL ELEMENT STYLING ==== */
+img,
+.form,
+.icon-box,
+.blog-card {
+  border-radius: .6rem;
+  transition: all .4s ease;
+}
+
+h1,
+h2 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e6d6d2;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* NAVBAR CONTAINER */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, links right */
+}
+
+/* LOGO */
+.nav-logo {
+  text-decoration: none;
+  font-family: "Georgia", serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #7b5d4d;
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease, transform .3s ease;
+}
+
+.nav-logo:hover {
+  color: #a07b6a;
+  transform: scale(1.05);
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: "Georgia", serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #8b6f5c;
+  position: relative;
+  transition: color .2s ease;
+}
+
+.nav-links a::after { /* PSEUDO-ELEMENT */
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #c4a89f;
+  transition: width .3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #a6846e;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: #a6846e; 
+}
+
+/* FLOWER SEPARATORS */
+.nav-icon {
+  font-size: 1.5rem;
+  color: #d7bfb7;
+  opacity: 0.8;
+  margin: 0 0.25rem;
+  user-select: none;
+}
+
+/* ==== PAGE STYLING ==== */
+.page-section {
+    padding: 6rem 2rem 4rem;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #ffffff;
+}
+
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-title {
+    font-size: rem;
+    font-family: "Georgia", serif;
+    color: #8b6f5c;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    border-bottom: 2px solid #e8d5d0;
+    display: inline-block;
+    padding-bottom: 0.25rem;
+}
+
+.page-title:after {
+    content: " ✦";
+    color: #c4a89f;
+}
