@@ -6,7 +6,7 @@
     <title>Projects</title>
 
      <!-- CUSTOM CSS STYLESHEET -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="form.css">
 </head>
 
 <body class="form-page">
@@ -14,7 +14,7 @@
     <!-- NAVIGATION BAR -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="index.html" class="nav-logo">Jaina T.</a>
+      <a href="index.html" class="nav-logo" >Jaina T.</a>
 
       <ul class="nav-links">
         <li><a href="about.html">About</a></li>
@@ -23,74 +23,54 @@
         <li><a href="project.html">Projects</a></li>
         <span class="nav-icon">✿</span>
 
-        <li><a href="form.html">Form</a></li>
+        <li><a href="form.html" class="active">Form</a></li>
       </ul>
     </div>
   </nav>
   
-      <!-- FORM PAGE -->
-      <section>
-        <div>
-          <h1 class="page-title">Get in Touch</h1>
+       <!-- ========== FORM SECTION ========== -->
+  <section class="page-section form-section">
+    <div class="page-content fade-in">
+      <h1 class="page-title">Get in Touch</h1>
+      <p>
+        Subscribe to my newsletter or send me a message — I’d love to connect!
+      </p>
 
-          <p>
-            Subscribe to my newsletter or send me a message — I'd love to connect!
-          </p>
-
-          <!-- NEWSLETTER SIGNUP -->
-           <form class="form newsletter-form">
-
-            <div class="form-group">
-              <label for="newsletter-email">Subscribe to Newsletter</label>
-              <input
-              type="email"
-              id="newsletter-email"
-              name="newsletter-email"
-              placeholder="Enter your email"
-              required
-              />
-            </div>
-            <button type="submit" class="form-button">Subscribe</button>
-           </form>
-
-          <!-- MESSAGE FORM -->
-           <form class="form-contact-form">
-
-            <div class="form-group">
-              <label for="name">Your Name</label>
-              <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              required
-              />
-
-            <div class="form-group">
-              <label for="email">Your Email</label>
-              <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your Email"
-              required
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message</label>
-              <input
-              type="message"
-              id="message"
-              name="message"
-              placeholder="Write your message..."
-              required
-              />
-            </div>
-
-            <button type="submit" class="form-button">Send Message</button>
-           </form>
+      <!-- Newsletter Signup -->
+      <form class="form newsletter-form">
+        <div class="form-group">
+          <label for="newsletter-email">Subscribe to Newsletter</label>
+          <input
+            type="email"
+            id="newsletter-email"
+            name="newsletter-email"
+            placeholder="Enter your email"
+            required
+          />
         </div>
-      </section>       
+        <button type="submit" class="form-button">Subscribe</button>
+      </form>
+
+      <!-- Message Form -->
+      <form class="form contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+        </div>
+
+        <button type="submit" class="form-button">Send Message</button>
+      </form>
+    </div>
+  </section>
 </body>
 </html>
