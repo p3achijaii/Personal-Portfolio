@@ -147,7 +147,9 @@ h2 {
   transition: all 3.s ease;
 }
 
-#nav-toggle:checked + .nav-dropbox span:nth-child
+#nav-toggle:checked + .nav-dropbox span:nth-child {
+
+}
 
 /* ==== PAGE STYLING ==== */
 .page-section {
@@ -265,3 +267,4 @@ h2 {
 .blog-card:hover .image-container::after {
   opacity: 1;
 }
+
