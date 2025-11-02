@@ -125,6 +125,30 @@ h2 {
   user-select: none;
 }
 
+/* ==== DROPDOWN MENU ==== */
+#nav-toggle {
+  display: none;
+}
+
+.nav-dropbox {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.nav-dropbox span {
+  display: block;
+  height: 3px;
+  background: #6b5549;
+  border-radius: 2px;
+  transition: all 3.s ease;
+}
+
+#nav-toggle:checked + .nav-dropbox span:nth-child
+
 /* ==== PAGE STYLING ==== */
 .page-section {
     padding: 6rem 2rem 4rem;
@@ -167,4 +191,77 @@ h2 {
 .page-title:after {
     content: " ✦";
     color: #c4a89f;
+}
+
+/* ==== PROJECTS GRID ==== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(340px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.blog-card {
+  background: #faf8f7;
+  border: 1px solid #e5d8d2;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.blog-card h2 {
+  font-size: 1.6rem;
+  color: #8b6f5c;
+  margin-bottom: .3rem;
+}
+
+.blog-card time {
+  display: block;
+  font-size: .9rem;
+  color: #a58b7e;
+  margin-bottom: .5rem;
+}
+
+.blog-card p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* ==== PROJECT CARD IMAGE HOVER EFFECT ==== */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+/* SOFT OVERLAY ON HOVER */
+.image-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(232, 213, 208, 0.25); /* subtle beige tint */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* HOVER EFFECTS */
+.blog-card:hover .image-container img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+.blog-card:hover .image-container::after {
+  opacity: 1;
 }
