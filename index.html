@@ -6,30 +6,42 @@
     <title>Jaina Torres</title>
 
     <!-- CUSTOM CSS STYLESHEET -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
 
     <!-- SOCIAL MEDIA LOGO LINK -->
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
-  
-  <body class="home-page">
-  <!-- NAVIGATION BAR -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Jaina T.</a>
 
-      <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <span class="nav-icon">✿</span>
-        <li><a href="project.html">Projects</a></li>
-        <span class="nav-icon">✿</span>
-        <li><a href="form.html">Form</a></li>
-      </ul>
-    </div>
-  </nav>
+  <body class="home-page">
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">Jaina T.</a>
+
+        <!-- HIDDEN CHECKBOX -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+
+        <!-- HAMBURGER ICON -->
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <span class="nav-icon">✿</span>
+
+          <li><a href="project.html" class="active">Projects</a></li>
+          <span class="nav-icon">✿</span>
+
+          <li><a href="form.html">Form</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- HOMEPAGE -->
-     <div class="home-container">
+    <div class="home-container">
       <div class="home-content">
         <div class="home-header">
           <h1 class="home-title">J A I N A</h1>
@@ -44,35 +56,31 @@
             rel="noopener noreferrer"
             class="icon-box"
           >
-          <i data-lucide="github"></i>
+            <i data-lucide="github"></i>
           </a>
 
-            <span class="divider-icon">✿</span>
+          <span class="divider-icon">✿</span>
 
-           <a
+          <a
             href="https://www.linkedin.com/in/jaina-torres-8a938636b/"
             target="_blank"
             rel="noopener noreferrer"
             class="icon-box"
           >
-          <i data-lucide="linkedin"></i>
+            <i data-lucide="linkedin"></i>
           </a>
 
-            <span class="divider-icon">✿</span>
+          <span class="divider-icon">✿</span>
 
-           <a
-            href="https://mail.google.com/mail/" 
-            class="icon-box"
-          >
-          <i data-lucide="mail"></i>
+          <a href="https://mail.google.com/mail/" class="icon-box">
+            <i data-lucide="mail"></i>
           </a>
-          
         </div>
       </div>
-     </div>
+    </div>
 
-     <script>
+    <script>
       lucide.createIcons();
-     </script>
+    </script>
   </body>
 </html>
