@@ -225,121 +225,73 @@ h2 {
   }
 }
 
-/* ==== PROJECTS GRID ==== */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(520px, 1fr)); /* wider cards */
-  gap: 2rem; /* more space between cards */
+/* ==== FORM STYLING ==== */
+.form {
   margin-top: 1.5rem;
-  justify-content: center; /* keeps grid centered if screen wider than cards */
-}
-
-.blog-card {
-  background: #faf8f7;
-  border: 2px solid #e5d8d2;
+  background-color: #faf8f7;
   padding: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.blog-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-}
-
-.blog-card h2 {
-  font-size: 1.6rem;
-  color: #8b6f5c;
-  margin-bottom: 0.3rem;
-}
-
-.blog-card time {
-  display: block;
-  font-size: 0.9rem;
-  color: #a58b7e;
-  margin-bottom: 0.5rem;
-}
-
-.blog-card p {
-  line-height: 1.7;
-  font-size: 1.05rem;
-}
-
-/* ==== PROJECT CARD IMAGE HOVER EFFECT ==== */
-.image-container {
-  position: relative;
-  overflow: hidden;
+  border: 1px solid #e5d8d2;
   border-radius: 0.75rem;
-  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
 
-.image-container img {
-  width: 100%;
-  display: block;
-  transition: transform 0.6s ease, filter 0.6s ease;
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
 }
 
-/* ===== READ MORE LINK ===== */
-.read-more {
-  display: inline-block;
-  margin-top: 0.75rem;
+.form-group label {
   font-size: 1rem;
   font-weight: 600;
   color: #8b6f5c;
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 0.5rem;
 }
 
-.read-more::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background-color: #c4a89f;
-  transition: width 0.3s ease;
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d4bfb5;
+  border-radius: 0.5rem;
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  color: #6b5549;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
 }
 
-.read-more:hover {
-  color: #a6846e;
-  transform: translateX(3px); /* slight forward motion */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #8b6f5c;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(139, 111, 92, 0.15);
 }
 
-.read-more:hover::after {
-  width: 100%;
+.form-group:nth-child(1) input:invalid,
+.form-group:nth-child(2) input:invalid {
+  border-color: #d17c7c;
 }
 
-/* SOFT OVERLAY ON HOVER */
-.image-container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(232, 213, 208, 0.25); /* subtle beige tint */
-  opacity: 0;
-  transition: opacity 0.5s ease;
+.form-group:nth-child(1) input:valid,
+.form-group:nth-child(2) input:valid {
+  border-color: #8b6f5c;
 }
 
-/* HOVER EFFECTS */
-.blog-card:hover .image-container img {
-  transform: scale(1.05);
-  filter: brightness(1.05);
+.form-button {
+  background-color: #8b6f5c;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.blog-card:hover .image-container::after {
-  opacity: 1;
-}
-
-.blog-card .read-more {
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.blog-card:hover .read-more {
-  opacity: 1;
-  transform: translateY(0);
+.form-button:hover {
+  background-color: #a6846e;
+  transform: translateY(-2px);
 }
 
 /* ==== FOOTER SECTION ==== */
@@ -372,8 +324,6 @@ h2 {
 
 .footer-link {
   font-weight: 600;
-  color: #8b6f5c;
-  text-decoration: none;
   background: linear-gradient(
     90deg,
     #b45a6a 0%,   
@@ -389,10 +339,6 @@ h2 {
   transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
-.footer-link:hover {
-  opacity: 0.8;
-  transform: translateY(-2px);
-}
 
 .footer-copy {
   font-size: 0.9rem;
@@ -408,7 +354,6 @@ h2 {
   animation: footerFadeIn 1.2s ease-out forwards;
   animation-delay: 0.3s;
 }
-
 
 @keyframes footerFadeIn {
   0% {
@@ -428,6 +373,8 @@ h2 {
     animation-range: entry 75% cover 100%;
   }
 }
+
+
 /* ==== HAMBURGER MENU ==== */
 .menu-toggle {
   display: none;
@@ -583,9 +530,5 @@ h2 {
 
   .nav-links li:nth-child(7) {
     animation-delay: 0.4s;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
   }
 }
